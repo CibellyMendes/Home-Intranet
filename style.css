@@ -65,7 +65,7 @@ body {
 
 h1 {
   font-weight: 800;
-  font-size: 1.54rem;
+  font-size: 1.35rem;
 }
 
 h2 {
@@ -129,15 +129,19 @@ main .intranet {
 }
 
 main .intranet img {
-  text-align: left;
-  width: 20rem;
-  height: 9rem;
+  width: 5rem;
+  height: 5rem;
+  padding: 11px;
 }
 main .intranet h2 {
   /* font-family: 'Bodoni Moda', serif; */
   font-size: 2rem;
-  text-align: center;
   margin: 1rem auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 main .insights {
@@ -165,12 +169,12 @@ main .insights > div .centro {
   margin: 1rem auto;
 }
 
-main .insights h3 {
+main .insights a h3 {
   margin: 1rem 0 0.6rem;
   font-size: 1rem;
 }
 
-main .insights > div .login {
+main .insights > div .login a {
   background-color: transparent;
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius-3);
@@ -185,7 +189,7 @@ main .insights > div .login {
   transition: all 300ms ease;
 }
 
-main .insights > div .login:hover {
+main .insights > div .login:hover a {
   background: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
