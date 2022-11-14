@@ -132,6 +132,7 @@ main .intranet img {
   width: 5rem;
   height: 5rem;
   padding: 11px;
+  margin-bottom: -4.75rem;
 }
 main .intranet h2 {
   /* font-family: 'Bodoni Moda', serif; */
