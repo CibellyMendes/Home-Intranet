@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/diminas.png" type="image/x-icon">
-    <title>Home Diminas</title>
+    <title>INTRANET DIMINAS | Cooperativa Mista dos Produtores Rurais de Conselheiro Pena.</title>
     <link rel="stylesheet" href="style.css">
     <link href="/website/css/uicons-solid-rounded.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  </head>
   <body>
     <div class="container">
       <main>
@@ -29,7 +31,7 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='../controle_frotas/'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='../controle_frotas/' target="_blank"><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
@@ -44,7 +46,7 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='https://diminas.com.br/convenio/'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='https://diminas.com.br/convenio/' target="_blank"><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
@@ -59,7 +61,7 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='../capital_social/capital_social.php'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='../capital_social/capital_social.php' target="_blank"><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
@@ -75,7 +77,7 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='../controle_temp/'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='../controle_temp/' target="_blank"><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
@@ -91,7 +93,7 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='#'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='#'><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
@@ -107,32 +109,54 @@
             <hr>
               <div class="login">
                 <div>
-                  <a href='#'><h3>Entrar</h3></a>
+                  <a class="btn-open" href='#'><h3>Entrar</h3></a>
                 </div>
               </div>
           </div>
         </div>
       </main>
     </div>
-    <footer>
-        <div class="footer">
-        <div class="container">
-          <div class="redes">
-            <h3>Siga-nos nas redes sociais!</h3>
-            <a href="https://l.instagram.com/?u=https%3A%2F%2Fbit.ly%2Fdiminaswhatsapp&e=ATM2mjgSH2gFoz06bHea5ThEalvC4ipkCzdYbhUVRJVTY9tRvfoftOUAIqgfEnjs4qdsbD6nYMb7mvFN_eKaJg&s=1 "><img src="svg's/wpp.svg" alt=""></a>
-            <a href="https://www.instagram.com/laticinios_diminas/"><img src="svg's/insta.svg" alt=""></a>
-            <a href="https://github.com/diminas"><img src="svg's/github.svg" alt=""></a>
-            <a href="https://pt-br.facebook.com/Laticioniodiminas/"><img src="svg's/facebook.svg" alt=""></a>
-            <a href="https://diminas.com.br/"><img src="svg's/internet.svg" alt=""></a>
-          </div>
-          <hr class="dashed"/>
-            <p><b>Laticícios DIMINAS
-                </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">(33) 3261-1531</a>&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="">informatica@diminas.com.br</a>&nbsp;&nbsp;&nbsp;&nbsp;Setor de Tecnologia 
-            <p>© 2022 <b>-</b> Todos os direitos reservados.</p>
-            <p><b>   
-        </div>
+
+
+    <!--- MODAL -->
+    <section class="modal hidden">
+      <div class="flex">
+        <img src="img/diminas.png" width="40px" height="40px" alt="img" />
+        <button class="btn-close">⨉</button>
       </div>
-    </footer>
+      <div>
+        <h3>Gostaria de se conectar?</h3>
+        <p>
+          Digite o email e senha de acesso para acessar esta página! :)
+        </p>
+      </div>
+      <input type="email" id="email" placeholder="email@email.com" />
+      <input type="password" id="pass" />
+      <button class="btn">Entrar</button>
+    </section>
+    <div class="overlay hidden"></div>
+  <!-- FIM MODAL -->
+
+  <footer>
+    <div class="footer">
+    <div class="container">
+      <div class="redes">
+        <h3>Siga-nos nas redes sociais!</h3>
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fbit.ly%2Fdiminaswhatsapp&e=ATM2mjgSH2gFoz06bHea5ThEalvC4ipkCzdYbhUVRJVTY9tRvfoftOUAIqgfEnjs4qdsbD6nYMb7mvFN_eKaJg&s=1 "><img src="svg's/wpp.svg" alt=""></a>
+        <a href="https://www.instagram.com/laticinios_diminas/"><img src="svg's/insta.svg" alt=""></a>
+        <a href="https://github.com/diminas"><img src="svg's/github.svg" alt=""></a>
+        <a href="https://pt-br.facebook.com/Laticioniodiminas/"><img src="svg's/facebook.svg" alt=""></a>
+        <a href="https://diminas.com.br/"><img src="svg's/internet.svg" alt=""></a>
+      </div>
+      <hr class="dashed"/>
+        <p><b>Laticínios DIMINAS
+            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">(33) 3261-1531</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="">informatica@diminas.com.br</a>&nbsp;&nbsp;&nbsp;&nbsp;Setor de Tecnologia 
+        <p>© 2022 <b>-</b> Todos os direitos reservados.</p>
+        <p><b>   
+    </div>
+  </div>
+</footer>
+    <script src="index.js"></script>
   </body>
 </html>
