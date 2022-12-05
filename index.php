@@ -161,7 +161,7 @@
       <div class="container">
         <div class="redes">
           <h3>Siga-nos nas redes sociais!</h3>
-          <a href="https://l.instagram.com/?u=https%3A%2F%2Fbit.ly%2Fdiminaswhatsapp&e=ATM2mjgSH2gFoz06bHea5ThEalvC4ipkCzdYbhUVRJVTY9tRvfoftOUAIqgfEnjs4qdsbD6nYMb7mvFN_eKaJg&s=1 "><img src="svg/wpp.svg" alt=""></a>
+          <a href="https://bit.ly/diminaswhatsapp"><img src="svg/wpp.svg" alt=""></a>
           <a href="https://www.instagram.com/laticinios_diminas/"><img src="svg/insta.svg" alt=""></a>
           <a href="https://github.com/diminas"><img src="svg/github.svg" alt=""></a>
           <a href="https://pt-br.facebook.com/Laticioniodiminas/"><img src="svg/facebook.svg" alt=""></a>
