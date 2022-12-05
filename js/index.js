@@ -1,4 +1,7 @@
-function OpenModal() {
+function OpenModal(element) {
+  // ####### SETAR O SYSTEM TARGET NO INPUT HIDDEN ######## //
+  document.getElementById('system_target').value = element
+
   // ####### VARIÁVEIS ######## //
   const modal = document.querySelector('.modal')
   const overlay = document.querySelector('.overlay')
