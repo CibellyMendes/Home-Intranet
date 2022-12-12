@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="img/diminas.png" type="image/x-icon">
   <title>INTRANET DIMINAS | Cooperativa Mista dos Produtores Rurais de Conselheiro Pena.</title>
-  <link rel="stylesheet" href="<?php DIR_ROOT_CSS ?>style.css">
+  <link rel="stylesheet" href="<?php print DIR_ROOT_CSS . "main.css" ?> ">
+  <link rel="stylesheet" href="css/style.css">
   <link href="/website/css/uicons-solid-rounded.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
@@ -159,13 +160,13 @@
   <footer>
     <div class="footer">
       <div class="container">
+        <h3>Siga-nos nas redes sociais!</h3>
         <div class="redes">
-          <h3>Siga-nos nas redes sociais!</h3>
-          <a href="https://bit.ly/diminaswhatsapp"><img src="svg/wpp.svg" alt=""></a>
-          <a href="https://www.instagram.com/laticinios_diminas/"><img src="svg/insta.svg" alt=""></a>
-          <a href="https://github.com/diminas"><img src="svg/github.svg" alt=""></a>
-          <a href="https://pt-br.facebook.com/Laticioniodiminas/"><img src="svg/facebook.svg" alt=""></a>
-          <a href="https://diminas.com.br/"><img src="svg/internet.svg" alt=""></a>
+          <a href="https://bit.ly/diminaswhatsapp" target="_blank"><img src="svg/wpp.svg" alt=""></a>
+          <a href="https://www.instagram.com/laticinios_diminas/" target="_blank"><img src="svg/insta.svg" alt=""></a>
+          <a href="https://github.com/diminas" target="_blank"><img src="svg/github.svg" alt=""></a>
+          <a href="https://pt-br.facebook.com/Laticioniodiminas/" target="_blank"><img src="svg/facebook.svg" alt=""></a>
+          <a href="https://diminas.com.br/" target="_blank"><img src="svg/internet.svg" alt=""></a>
         </div>
         <hr class="dashed" />
         <p><b>Laticínios DIMINAS
