@@ -179,12 +179,13 @@
   </footer>
   <script src="js/index.js"></script>
 
-  <script>
+  <!-- <script>
     function Login() {
       var div_result = document.getElementById('result');
       var system_target = document.getElementById('system_target').value;
       var email = document.getElementById('email').value;
-      var password = document.getElementById('password').value;
+      var password = btoa(document.getElementById('password').value);
+      
       const d = new Date();
       var array = {
         "system_target": system_target,
@@ -199,19 +200,92 @@
           "data": data
         },
         success: function(response) {
-          console.debug(response);
-          console.log(d.getSeconds());
-          if (response == "true") {
-            div_result.innerHTML = 'Sim';
-          } else {
-            div_result.innerHTML = 'Nao';
-          }
-
+          console.log(response);   
+          //div_result.classList.add('success');
+          var obj = JSON.parse(response);
+          console.log(obj);
+          //div_result.innerHTML = response;
         }
       });
 
     }
-  </script>
+  </script> -->
+
+<script>
+  function Login() {
+    var div_result = document.getElementById('result');
+    div_result.classList.remove;
+    div_result.innerHTML = '';
+
+    var system_target = document.getElementById('system_target').value;
+    var email = document.getElementById('email').value;
+    var password = btoa(document.getElementById('password').value);
+    var data = ('system_target='+system_target+'&email='+email+'&password='+password);
+    
+    //Defaul
+    var msg = '';
+    var url_target = '';
+    var user_name = '';
+    
+    const xhr = new XMLHttpRequest();
+    const method = "POST";
+    const url = "src/validation.php";
+
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type' ,'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = () => {
+      // In local files, status is 0 upon success in Mozilla Firefox
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        const status = xhr.status;
+        //console.log(status);
+        if (status === 0 || (status >= 200 && status < 400)) {
+          // The request has been completed successfully                              
+          var response = xhr.responseText;
+          // console.log(response);
+          var obj = JSON.parse(response);
+          console.log(obj);          
+
+          //
+          Object.entries(obj).forEach(([key, value]) => {       
+            //URL de destino
+            if(`${key}` == 'url'){
+              url_target = `${value}`;
+            }
+            //Usuario
+            if(`${key}` == 'user_name'){
+              user_name = `${value}`;
+            }
+            //Captura mensagem
+            if(`${key}` == 'msg'){
+              msg = `${value}`;
+              
+            }
+            
+            //Verifica tipo de retorno
+            if(`${key}` == 'return'){
+              if(`${value}` == 'true'){
+                div_result.innerHTML = msg + ". Bem vindo, "+ user_name + ", aguarde...";
+                div_result.classList.add('success');
+              }else{
+                div_result.innerHTML = msg;
+                div_result.classList.add('warning');
+              }
+            }
+            
+          });
+
+
+        } else {
+          // Oh no! There has been an error with the request!
+        }
+      }
+    };
+    xhr.send(data);
+  }
+</script>
+
+
 
   <script>
     const xhr = new XMLHttpRequest();
