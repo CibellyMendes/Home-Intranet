@@ -235,9 +235,6 @@
     xhr.setRequestHeader('Content-Type' ,'application/x-www-form-urlencoded');
 
     xhr.onreadystatechange = () => {
-      var div_result = document.getElementById('result');
-    div_result.classList.remove;
-    div_result.innerHTML = '';
       // In local files, status is 0 upon success in Mozilla Firefox
       if (xhr.readyState === XMLHttpRequest.DONE) {
         const status = xhr.status;
@@ -259,24 +256,26 @@
             //Usuario
             if(`${key}` == 'user_name'){
               user_name = `${value}`;
+              console.log(user_name);
             }
             //Captura mensagem
             if(`${key}` == 'msg'){
               msg = `${value}`;
-              
             }
-            
+
             //Verifica tipo de retorno
             if(`${key}` == 'return'){
               if(`${value}` == 'true'){
                 div_result.className = 'alert alert-success alert-dismissable';
-                div_result.innerHTML = "Seja Bem-vindo(a), " + user_name + "! Por favor, aguarde.";
+                div_result.innerHTML = 'Seja Bem-vindo, '+user_name+'! Por favor, aguarde.';
+                setTimeout(() => {
+                  location.href = url_target;
+                }, 3000);
               }else{
                 div_result.className = 'alert alert-danger alert-dismissable';
                 div_result.innerHTML = "Ops! Algo deu errado! Por favor, tente novamente!";
               }
             }
-            
           });
 
 
