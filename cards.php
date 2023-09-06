@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * comment
+ * 
+ */
 require_once 'src/config.php';
 require_once DIR_AUTH . '/system.class.php';
 
